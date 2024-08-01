@@ -2,8 +2,9 @@
 import QuizHeader from "@/components/Quiz/QuizHeader.vue";
 import QuizQuestion from "@/components/Quiz/QuizQuestion.vue";
 import QuizFooter from "@/components/Quiz/QuizFooter.vue";
+import {state} from "@/stores/quizStore"
 // import { provide, ref } from "vue";
-defineProps({ quiz: Object });
+// defineProps({ quiz: Object });
 // let props = defineProps({ quiz: Object });
 // let name = ref('John Doe');
 // provide('name', {
