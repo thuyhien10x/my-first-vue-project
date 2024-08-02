@@ -1,13 +1,13 @@
 <script setup>
   import {useFlash} from "@/composable/useFlash";
-   
-      const {flash} = useFlash();
+  const {flash} = useFlash(); 
+  import {counter} from "@/stores/counterStore";
 </script>
 
 <template>
   <div class="about">
     <p>
-       <button @click="flash('Yay','It Works!','info')">Click Me</button>
+      About Page. The current count is {{ counter.count }}
     </p>
 </div>
 </template>

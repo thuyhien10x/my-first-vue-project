@@ -14,7 +14,9 @@ import AboutView from '@/views/AboutView.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/counter">Counter</RouterLink>
         <RouterLink to="/contact">Contact</RouterLink>
+        
       </nav>
     </div>
   </header>
