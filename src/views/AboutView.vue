@@ -1,7 +1,7 @@
 <script setup>
   import {useFlash} from "@/composable/useFlash";
   const {flash} = useFlash(); 
-  import {counter} from "@/stores/counterStore";
+  // import {counter} from "@/stores/counterStore";
 </script>
 
 <template>
