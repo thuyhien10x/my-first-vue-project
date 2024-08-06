@@ -1,18 +1,37 @@
 <script setup>
-import team from "@/team.json"
+import team from "@/team.json";
 import TeamMembers from '@/components/Teams/TeamMembers.vue';
 import TeamHeader from "@/components/Teams/TeamHeader.vue";
-import TeamFooter from "@/components/Teams/TeamFooter.vue"
+import TeamFooter from "@/components/Teams/TeamFooter.vue";
+import Modal from "@/components/Teams/Modal.vue";
+import { ref } from "vue";
+import '../assets/tailwind.css'
+
+
+let showModal = ref(false);
 </script>
 
 <template>
-  <TeamHeader :team="team"/>
-
+  <TeamHeader @add="showModal = true" :team="team"/>
 
   <div class="place-self-center flex flex-col gap-y-3">
     <TeamMembers :team="team"/>
-      <p class="text-right text-gray-600 italic" v-show="team.members.length === team.spots">There are no remaining team spots. Upgrade to add more.</p>
+    <p class="text-right text-gray-600 italic" v-show="team.members.length === team.spots">
+      There are no remaining team spots. Upgrade to add more.
+    </p>
   </div>
- 
- <TeamFooter :team="team"/>
+
+  <TeamFooter :team="team"/>
+  <Modal :show="showModal" @close="showModal = false">
+    <template #default>
+      <p>Need to add a new member to your team?</p>
+      <form class="mt-6">
+        <div class="flex">
+          <input type="email" placeholder="Email Address..." class="flex-1">
+        <button>Add</button>
+        </div>
+      </form>
+    </template>
+    
+  </Modal>
 </template>
