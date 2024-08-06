@@ -3,7 +3,6 @@ import team from "@/team.json"
 import TeamMembers from '@/components/Teams/TeamMembers.vue';
 import TeamHeader from "@/components/Teams/TeamHeader.vue";
 import TeamFooter from "@/components/Teams/TeamFooter.vue"
-
 </script>
 
 <template>
